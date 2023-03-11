@@ -1,5 +1,3 @@
-# This is a sample Python script.
-
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
@@ -10,7 +8,24 @@ def encode(origin):
     return coded
 
 
-print("Hello World!")
+def main():
+    password = 0
+    while True:
+        print('''
+Menu
+------------- 
+1. Encode  
+2. Decode  
+3. Quit''')
+        choice = int(input("\nPlease enter an option: "))
+        if choice == 1:
+            password = input("Please enter your password to encode: ")
+            print("Your password has been encoded and stored!")
+        elif choice == 2:
+            print(f"The encoded password is {encode(str(password))}, and the original password is {password}.")
+        elif choice == 3:
+            break
 
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    main()
