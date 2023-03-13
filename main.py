@@ -8,6 +8,34 @@ def encode(origin):
     return coded
 
 
+
+def decode(encoded_password):
+    decoded_string = ''
+
+    for i in encoded_password:
+
+
+
+
+        x = int(i)
+
+        if x < 3:
+
+            second_value = (10+(x - 3))
+
+            decoded_string += str(second_value)
+
+        else:
+
+            y = x - 3
+
+            decoded_string += str(y)
+
+
+
+    return decoded_string
+
+
 def main():
     password = 0
     while True:
@@ -22,6 +50,8 @@ Menu
             password = input("Please enter your password to encode: ")
             print("Your password has been encoded and stored!")
         elif choice == 2:
+
+
             print(f"The encoded password is {encode(str(password))}, and the original password is {password}.")
         elif choice == 3:
             break
